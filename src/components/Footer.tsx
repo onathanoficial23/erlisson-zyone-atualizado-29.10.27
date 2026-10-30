@@ -10,8 +10,7 @@ import {
   PlayCircle, 
   CheckCircle2, 
   ArrowRight,
-  BookOpen,
-  Download
+  BookOpen
 } from 'lucide-react';
 
 export default function Footer() {
@@ -209,16 +208,6 @@ export default function Footer() {
             © {currentYear} Zyone Cosméticos. Divulgação por Consultor Independente Erlisson (ID: erlisson1996). Todos os direitos reservados.
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 text-[11px]">
-            <a 
-              href="/site-zyone-completo.zip" 
-              download="site-zyone-completo.zip"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zyone-gold/20 hover:bg-zyone-gold/30 text-zyone-gold font-bold transition-all border border-zyone-gold/40 shadow-sm"
-              title="Baixar backup completo (.zip) deste projeto"
-            >
-              <Download size={13} />
-              <span>Baixar Projeto (.zip)</span>
-            </a>
-            <span>•</span>
             <a 
               href="https://api.whatsapp.com/send?phone=5511916881597&text=Oi%2C%20Erlisson..%20Vim%20pelo%20site%20da%20*ZYONE*%20e%20quero%20saber%20como%20me%20cadastrar%20e%20revender%20%F0%9F%92%8E"
               target="_blank"
