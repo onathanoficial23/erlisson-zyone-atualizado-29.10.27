@@ -1,0 +1,248 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import EarningsEstimator from './components/EarningsEstimator';
+import ProductShowcase from './components/ProductShowcase';
+import KitSection from './components/KitSection';
+import SupportMaterials from './components/SupportMaterials';
+import VideoSection from './components/VideoSection';
+import PaymentTutorials from './components/PaymentTutorials';
+import FirstOrderGuide from './components/FirstOrderGuide';
+import Footer from './components/Footer';
+import { Smartphone, Layout, Users, Star, BarChart3, Globe } from 'lucide-react';
+import { motion } from 'motion/react';
+import appImage from './assets/images/regenerated_image_1778256702150.jpg';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-white selection:bg-zyone-red selection:text-white overflow-x-hidden w-full relative">
+      <Navbar />
+      
+      <main>
+        <Hero />
+        
+        {/* Why choose Zyone - Quick Feature Section */}
+        <section className="py-10 sm:py-12 bg-white border-y border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center opacity-60 hover:opacity-100 transition-all duration-500">
+              <div className="flex items-center justify-center font-black tracking-tighter text-base sm:text-lg lg:text-xl">100% BRASILEIRA</div>
+              <div className="flex items-center justify-center font-black tracking-tighter text-base sm:text-lg lg:text-xl">ALTA FIXAÇÃO</div>
+              <div className="flex items-center justify-center font-black tracking-tighter text-base sm:text-lg lg:text-xl">SISTEMA ÚNICO</div>
+              <div className="flex items-center justify-center font-black tracking-tighter text-base sm:text-lg lg:text-xl">TREINAMENTOS</div>
+            </div>
+          </div>
+        </section>
+
+        <ProductShowcase />
+        
+        {/* Income Opportunity Banner */}
+        <section className="py-16 sm:py-20 bg-zyone-red relative overflow-hidden group cursor-pointer transition-all hover:bg-zyone-red-dark">
+          <a 
+            href="https://escritorio.zyone.com.br/cadastro#?id=erlisson1996&convite=MTU3OQ%3D%3D" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 z-20"
+            aria-label="Cadastrar-se agora"
+          />
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6 group-hover:scale-105 transition-transform duration-500 leading-tight">
+              TORNE-SE UM <span className="text-zyone-dark">REVENDEDOR ZYONE</span>
+            </h2>
+            <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10 font-medium leading-relaxed">
+              A ZYONE Perfumes e Cosméticos oferece produtos de alta qualidade e fixação com 50% de desconto no atacado para revenda direta.
+            </p>
+            <div className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-white text-zyone-red rounded-2xl font-black text-base sm:text-lg shadow-2xl transition-all group-hover:bg-zyone-dark group-hover:text-white uppercase tracking-wider">
+              CADASTRAR-SE AGORA
+            </div>
+          </div>
+        </section>
+
+        <EarningsEstimator />
+        <SupportMaterials />
+        <VideoSection />
+
+        {/* App Section */}
+        <section className="py-16 sm:py-24 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div>
+                <span className="inline-flex items-center gap-2 px-4 py-1 bg-zyone-red/10 text-zyone-red text-xs font-black tracking-widest rounded-full mb-6">
+                  <Smartphone size={14} /> EXCLUSIVIDADE
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zyone-dark tracking-tighter uppercase leading-tight mb-6">
+                  TUDO O QUE VOCÊ PRECISA <br /> <span className="text-zyone-red">NA PALMA DA MÃO</span>
+                </h2>
+                <p className="text-gray-600 font-medium mb-10 leading-relaxed text-sm sm:text-base">
+                  Com o Aplicativo Zyone, você gerencia seus pedidos, acessa o catálogo interativo, consulta materiais de apoio e acompanha suas vendas em tempo real.
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mb-10">
+                  {[
+                    { icon: <Layout size={20} />, label: 'Catálogo Digital' },
+                    { icon: <Users size={20} />, label: 'Gestão de Pedidos' },
+                    { icon: <BarChart3 size={20} />, label: 'Acompanhamento de Vendas' },
+                    { icon: <Globe size={20} />, label: 'Treinamentos Online' }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-zyone-red border border-gray-100 shrink-0">
+                        {item.icon}
+                      </div>
+                      <span className="font-bold text-zyone-dark text-sm">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="https://escritorio.zyone.com.br/cadastro#?id=erlisson1996&convite=MTU3OQ%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-6 py-4 bg-zyone-dark hover:bg-black text-white rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg text-center"
+                  >
+                    <Smartphone size={16} className="text-zyone-gold shrink-0" />
+                    <span>Acessar pelo Navegador do Celular</span>
+                  </a>
+                  <a 
+                    href="https://escritorio.zyone.com.br/cadastro#?id=erlisson1996&convite=MTU3OQ%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-6 py-4 bg-zyone-red hover:bg-zyone-red-dark text-white rounded-xl font-black text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-zyone-red/20 text-center"
+                  >
+                    <span>Cadastre-se para Liberar Acesso</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative flex items-center justify-center">
+                <div className="absolute -inset-10 bg-zyone-gold/10 rounded-full blur-3xl opacity-50" />
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="relative group"
+                >
+                  <a 
+                    href="https://escritorio.zyone.com.br/cadastro#?id=erlisson1996&convite=MTU3OQ%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative cursor-pointer"
+                  >
+                    <img 
+                      src={appImage}
+                      alt="Zyone Gestão"
+                      className="w-full max-w-md h-auto rounded-3xl shadow-2xl border-4 border-white/10 transition-all duration-500 group-hover:scale-[1.02]"
+                    />
+                    <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10 pointer-events-none" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 rounded-3xl" />
+                  </a>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <KitSection />
+
+        {/* Registration Guide Section */}
+        <section id="cadastro-passo-a-passo" className="py-24 bg-gray-50 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className="inline-flex items-center px-4 py-1 bg-zyone-red/10 text-zyone-red text-[10px] font-black tracking-widest rounded-full mb-6 uppercase">
+                  Passo a Passo
+                </span>
+                <h2 className="text-4xl md:text-5xl font-black text-zyone-dark tracking-tighter uppercase leading-tight mb-6">
+                  Como realizar seu <span className="text-zyone-red">cadastro na Zyone?</span>
+                </h2>
+                <p className="text-gray-600 text-lg italic mb-8 border-l-4 border-zyone-red pl-4">
+                  Para integrar-se à Zyone, é necessário realizar o cadastro no site oficial da empresa.
+                </p>
+
+                <div className="space-y-6 text-gray-700 font-medium mb-10">
+                  <div className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
+                    <span className="text-zyone-red text-2xl shrink-0">👉</span>
+                    <div>
+                      <p className="text-sm text-gray-500 uppercase font-bold tracking-wider mb-1">Passo Inicial</p>
+                      <p className="mb-2">Acesse o link e faça seu cadastro agora mesmo:</p>
+                      <a 
+                        href="https://escritorio.zyone.com.br/cadastro#?id=erlisson1996&convite=MTU3OQ%3D%3D" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-zyone-red underline break-all font-black text-sm hover:text-zyone-dark transition-colors"
+                      >
+                        escritorio.zyone.com.br/cadastro
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <p className="leading-relaxed">
+                    Após concluir o cadastro, você receberá seu login e senha para acessar o Escritório Virtual, onde poderá gerenciar suas atividades.
+                  </p>
+                  <p className="leading-relaxed">
+                    Em seguida, será possível adquirir o Kit Inicial Zyone e iniciar sua trajetória conosco.
+                  </p>
+                  <p className="text-zyone-dark font-black text-xl uppercase tracking-tighter pt-4 leading-tight">
+                    Não deixe para depois. Faça seu cadastro hoje e tenha acesso imediato a preços de fábrica para revenda!
+                  </p>
+                </div>
+
+                <a 
+                  href="https://escritorio.zyone.com.br/cadastro#?id=erlisson1996&convite=MTU3OQ%3D%3D"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-5 bg-zyone-red text-white rounded-2xl font-black text-lg shadow-xl hover:bg-zyone-dark hover:scale-105 transition-all duration-300 w-full lg:w-auto uppercase tracking-tighter"
+                >
+                  Faça seu cadastro e tenha acesso ao Escritório Virtual
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative group"
+              >
+                <div className="absolute -inset-4 bg-gradient-to-tr from-zyone-red/20 to-zyone-gold/20 rounded-[2.5rem] blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
+                <div className="relative aspect-video rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl shadow-black/5 ring-1 ring-gray-100 bg-black">
+                  {/* Bloqueador de links externos do YouTube */}
+                  <div className="absolute top-0 inset-x-0 h-12 z-20 pointer-events-auto" />
+                  <div className="absolute bottom-0 right-0 w-24 h-10 z-20 pointer-events-auto" />
+
+                  <iframe 
+                    className="w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/WrMHx2cobrg?start=55&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" 
+                    title="Como realizar seu cadastro na Zyone"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    sandbox="allow-scripts allow-same-origin allow-presentation"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="mt-6 flex items-center justify-center gap-4 text-gray-400 group-hover:text-zyone-red transition-colors">
+                  <div className="w-12 h-px bg-current opacity-20" />
+                  <span className="text-[10px] uppercase font-black tracking-widest">Tutorial de Cadastro</span>
+                  <div className="w-12 h-px bg-current opacity-20" />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Payment Tutorials Section */}
+        <PaymentTutorials />
+
+        {/* First Order & Virtual Office Guide */}
+        <FirstOrderGuide />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
